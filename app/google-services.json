@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "647302979140",
+    "firebase_url": "https://tornadoapi-a9323.firebaseio.com",
+    "project_id": "tornadoapi-a9323",
+    "storage_bucket": "tornadoapi-a9323.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647302979140:android:f424eaf635e3575a",
+        "android_client_info": {
+          "package_name": "com.example.adm.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "647302979140-pt6q4cojco2jalamnbpiurs57avsggvn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlWVgXMNFhcSi4uggggvhXq268-5u6vhU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
