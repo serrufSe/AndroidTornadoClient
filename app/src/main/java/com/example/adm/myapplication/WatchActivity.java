@@ -5,8 +5,13 @@ import android.app.NotificationChannel;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 
 import com.google.firebase.iid.FirebaseInstanceId;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.Properties;
 
@@ -58,5 +63,26 @@ public class WatchActivity extends AppCompatActivity {
                 }, error -> {
                     Log.e(Tag, error.getMessage());
                 });
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onEvent(NotificationEvent event) {
+        Log.d(Tag, "Get new notification");
+
+        ImageView view = findViewById(R.id.imageView);
+
+        view.setImageBitmap(event.getBody());
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        EventBus.getDefault().register(this);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        EventBus.getDefault().unregister(this);
     }
 }
